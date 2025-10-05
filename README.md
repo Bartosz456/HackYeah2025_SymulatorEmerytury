@@ -1,4 +1,3 @@
-README
 "Z myślą o przyszłości" to prototypowa aplikacja webowa stworzona w ramach Hackathonu 2025. 
 Głównym celem projektu jest zwiększenie świadomości społecznej na temat przyszłych świadczeń emerytalnych, szczególnie wśród osób wkraczających na rynek pracy.
 Aplikacja w wizualny i angażujący sposób przedstawia, jak bieżące decyzje zawodowe i finansowe (takie jak wysokość wynagrodzenia, płeć, wiek rozpoczęcia pracy czy okresy chorobowe) wpływają na realną wysokość przyszłej emerytury.

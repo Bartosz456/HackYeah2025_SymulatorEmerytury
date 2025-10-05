@@ -1,0 +1,181 @@
+/* --- ZMIENNE KOLORÓW (zgodne z Księgą Znaku ZUS) --- */
+:root {
+  --zus-yellow: 255,179,79; 
+  --zus-green: 0,153,63;   
+  --zus-light-gray: 190,195,206; 
+  --zus-blue: 63,132,210;  
+  --zus-dark: 0,65,110;    
+  --zus-red: 240,94,94;     
+  --zus-black: 0,0,0;      
+}
+
+/* --- RESET I PODSTAWOWE STYLIZACJE --- */
+* { box-sizing: border-box; }
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; 
+  margin: 0; 
+  background-color: #fff; 
+  color: rgb(var(--zus-black));
+}
+.app-root {
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 0 16px; 
+}
+
+/* --- GÓRNY PASEK (ZUS Logo, Menu) --- */
+.header-top {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+.zus-logo {
+  color: rgb(var(--zus-green)); 
+  font-size: 24px;
+  font-weight: 700;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav-menu span {
+  font-size: 12px; 
+  color: rgb(var(--zus-green));
+}
+.hamburger-menu {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.hamburger-menu div {
+  height: 3px;
+  background-color: rgb(var(--zus-black));
+  width: 100%;
+}
+
+/* --- STYLIZACJA KARTY (Card) --- */
+.card {
+  background: #fff;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(10,10,10,0.08);
+  height: fit-content; 
+}
+.card h2 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* --- STYLIZACJA INPUTÓW I PRZYCISKÓW --- */
+.card label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+.card input[type=number], .card select {
+  width: 100%;
+  padding: 6px 10px;
+  border: 2px solid rgb(var(--zus-green));
+  border-radius: 6px;
+  margin-top: 4px;
+  color: rgb(var(--zus-black));
+  font-weight: 600;
+}
+.card input[type=number]:focus, .card select:focus {
+  outline: none;
+  border-color: rgb(var(--zus-blue));
+}
+.action-button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  background: rgb(var(--zus-black));
+  color: #fff;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.action-button.green {
+  background: white;
+  color: rgb(var(--zus-green));
+  border: 2px solid rgb(var(--zus-green));
+}
+.action-button.blue {
+  background: rgb(var(--zus-green));
+  color: white;
+  font-size: 16px;
+  padding: 10px 30px;
+}
+
+/* --- UKŁAD JEDNOWIERSZOWY (3 kolumny obok siebie) --- */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* trzy kolumny, jeden wiersz */
+  grid-template-rows: auto; /* tylko jeden wiersz */
+  gap: 20px;
+  align-items: start;
+  margin-top: 16px;
+}
+
+/* Kolumny */
+.card-left,
+.card-center,
+.card-right {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Karta Awatar/Wynik (środkowa) */
+.card-center {
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px; 
+}
+.card-center h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: rgb(var(--zus-black));
+}
+
+.card-center h2 span {
+  color: rgb(var(--zus-green));
+}
+.avatar-image {
+  width: 200px;
+  height: auto;
+  margin: 20px 0;
+}
+.center-result-value {
+  font-size: 36px;
+  font-weight: bold; 
+  color: rgb(var(--zus-black));
+}
+
+/* --- DODATKOWE SEKCJE --- */
+.chart-wrapper {
+  margin-top: 20px;
+}
+.footer {
+  margin-top: 24px;
+  text-align: center;
+  color: #667;
+  font-size: 12px;
+}
+
+/* --- RESPONSYWNOŚĆ --- */
+@media (max-width: 900px) {
+  .grid-layout {
+    grid-template-columns: 1fr; /* Na mniejszych ekranach jedna kolumna */
+  }
+}
