@@ -22,6 +22,7 @@ Stopa Zastąpienia: Prezentacja kluczowego wskaźnika porównującego prognozowa
 Użute technologie i narzędzia:
 ChatGPT
 React
+Node.js
 
 Autorzy:
 Bartosz Szuba bartoszsz14@gmail.com
